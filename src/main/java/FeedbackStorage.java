@@ -22,4 +22,10 @@ public class FeedbackStorage {
             return (List<Supplier>) ois.readObject();
         }
     }
+
+    public static void deleteFeedback(String name) throws IOException, ClassNotFoundException {
+        List<Feedback> list = getAllFeedbacks();
+        list.removeIf(feedback -> feedback.getUserName().equals(name));
+        saveAll(list);
+    }
 }
