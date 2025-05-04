@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Main feedback container */
+.feedback-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Feedback Submission Form */
+.feedback-form {
+    margin-bottom: 30px;
+}
+
+.feedback-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feedback-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.feedback-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.feedback-form button:hover {
+    background-color: #45a049;
+}
+
+/* Rating system (stars) */
+.rating {
+    display: flex;
+    gap: 5px;
+    direction: rtl;
+    justify-content: center;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    background-color: #ff9800;
+}
+
+.rating input:focus ~ label {
+    outline: 2px solid #ff9800;
+}
+
+/* Feedback List Section */
+.feedback-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Review Box Styling */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feedback-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.feedback-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Feedback Header */
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.medicine-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.username {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-date {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Feedback Body */
+.feedback-body {
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Feedback Footer */
+.feedback-footer {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+}
+
+.review-rating {
+    font-weight: bold;
+    color: #ff9800;
+}
+
+/* No feedback message */
+.no-feedback {
+    font-size: 1rem;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feedback-form input,
+    .feedback-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .feedback-box {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .feedback-list h2 {
+        font-size: 1.25rem;
+    }
+}
