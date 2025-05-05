@@ -15,8 +15,11 @@ public class AddSupplierServlet extends HttpServlet {
         String id = request.getParameter("id");
         String name = request.getParameter("name");
         String contact = request.getParameter("contact");
+        String email = request.getParameter("email");
+        String type = request.getParameter("type");
 
-        Supplier supplier = new Supplier(id, name, contact);
+        Supplier supplier = new Supplier(id, name, contact, email, type);
+
 
         try {
             SupplierStorage.addSupplier(supplier);

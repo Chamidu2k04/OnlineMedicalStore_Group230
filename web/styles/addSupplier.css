@@ -1,60 +1,162 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f2f5f9;
+/* Reset & Base */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.form-container {
-    max-width: 450px;
-    margin: 80px auto;
-    padding: 30px 40px;
-    background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-}
-
-.form-container h2 {
-    text-align: center;
-    margin-bottom: 25px;
+html, body {
+    height: 120%;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: #2c3e50;
+    line-height: 1;
 }
 
-.supplier-form label {
-    display: block;
-    margin: 12px 0 6px;
-    font-weight: 500;
+/* Layout Centering */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns content from the top */
+    padding: 80px 20px 40px;  /* Adds top space to push content down */
+    min-height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 550px;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Heading */
+.form-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
     color: #34495e;
 }
 
-.supplier-form input {
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Reduced gap */
+}
+
+/* Label */
+form label {
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input & Select */
+form input[type="text"],
+form input[type="email"],
+form select {
     width: 100%;
-    padding: 10px 12px;
+    padding: 14px 16px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 14px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.supplier-form input:focus {
-    border-color: #3498db;
+form input:focus,
+form select:focus {
+    border-color: #1abc9c;
+    background-color: #fff;
     outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
 }
 
-.supplier-form button {
-    width: 100%;
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #27ae60;
-    color: white;
+/* Error Message */
+.error-message {
+    font-size: 0.85rem;
+    color: #e74c3c;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Submit Button */
+form button {
+    padding: 14px;
+    background: linear-gradient(to right, #1abc9c, #16a085);
     border: none;
     border-radius: 6px;
-    font-size: 16px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.supplier-form button:hover {
-    background-color: #219150;
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(22, 160, 133, 0.3);
+}
+
+/* Toast Notification */
+.toast-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.toast-message.error {
+    background-color: #e74c3c;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 25px 20px;
+    }
+
+    form input,
+    form select,
+    form button {
+        font-size: 0.95rem;
+    }
 }

@@ -13,8 +13,11 @@ public class EditSupplierServlet extends HttpServlet {
             Supplier updated = new Supplier(
                     request.getParameter("id"),
                     request.getParameter("name"),
-                    request.getParameter("contact")
+                    request.getParameter("contact"),
+                    request.getParameter("email"),
+                    request.getParameter("type")
             );
+
             SupplierStorage.updateSupplier(updated);
         } catch (Exception e) {
             e.printStackTrace();
