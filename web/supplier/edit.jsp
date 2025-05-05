@@ -21,10 +21,11 @@
         <label for="name">Name</label>
         <input type="text" name="name" value="<%= s.getName() %>" required><br>
 
+        
         <label for="email">Email Address</label>
         <input type="email" name="email" value="<%= s.getEmail() %>" required><br>
 
-        
+
         <label for="type">Supplier Type</label>
         <select name="type" required>
             <option value="Wholesaler" <%= "Wholesaler".equals(s.getType()) ? "selected" : "" %>>Wholesaler</option>
