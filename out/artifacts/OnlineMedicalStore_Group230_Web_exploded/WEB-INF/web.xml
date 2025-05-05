@@ -6,6 +6,17 @@
          version="4.0">
 
 
+    <servlet>
+        <servlet-name>FeedbackServlet</servlet-name>
+        <servlet-class>servlet.FeedbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FeedbackServlet</servlet-name>
+        <url-pattern>/submitFeedback</url-pattern>
+    </servlet-mapping>
+
+
+
 
 
 </web-app>

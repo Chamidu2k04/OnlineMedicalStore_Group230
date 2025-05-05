@@ -17,14 +17,14 @@
         <section class="feedback-form">
             <h2>Submit Your Feedback</h2>
             <form action="/submitFeedback" method="post">
-                <label for="medicine">Medicine Name:</label>
+            <label for="medicine">Medicine Name:</label>
                 <input type="text" id="medicine" name="medicine" placeholder="Enter medicine name" required>
 
                 <label for="userName">Your Name:</label>
-                <input type="text" id="userName" name="userName" placeholder="Enter your name" required>
+                <input type="text" id="userName" name="username" placeholder="Enter your name" required>
 
                 <label for="reviewText">Your Feedback:</label>
-                <textarea id="reviewText" name="reviewText" placeholder="Share your thoughts..." rows="4" required></textarea>
+                <textarea id="reviewText" name="review" placeholder="Share your thoughts..." rows="4" required></textarea>
 
                 <label for="rating">Rating:</label>
                 <div id="rating" class="rating">
@@ -44,9 +44,9 @@
                     <label for="star1">&#9733;</label>
                 </div>
 
-
                 <button type="submit">Submit Feedback</button>
             </form>
+
         </section>
 
     </div>
