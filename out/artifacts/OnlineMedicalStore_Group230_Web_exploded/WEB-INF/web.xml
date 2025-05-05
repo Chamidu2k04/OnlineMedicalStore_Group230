@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         version="3.1"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+    <!-- Servlet definition -->
+    <servlet>
+        <servlet-name>AddSupplier</servlet-name>
+        <servlet-class>supplier.AddSupplierServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet URL mapping -->
+    <servlet-mapping>
+        <servlet-name>AddSupplier</servlet-name>
+        <url-pattern>/addSupplier</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditSupplier</servlet-name>
+        <servlet-class>supplier.EditSupplierServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditSupplier</servlet-name>
+        <url-pattern>/editSupplier</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteSupplier</servlet-name>
+        <servlet-class>supplier.DeleteSupplierServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteSupplier</servlet-name>
+        <url-pattern>/deleteSupplier</url-pattern>
+    </servlet-mapping>
+
+</web-app>
