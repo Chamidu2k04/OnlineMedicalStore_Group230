@@ -25,14 +25,21 @@ public class FeedbackStorage {
         }
     }
 
-
-    public void deleteFeedback(String name) throws IOException, ClassNotFoundException {
+    public void deleteFeedback(String userName, String medicineName) throws IOException, ClassNotFoundException {
         List<Feedback> list = getAllFeedbacks();
-        list.removeIf(feedback -> feedback.getUserName().equals(name));
+        list.removeIf(feedback -> feedback.getUserName().equals(userName) &&
+                feedback.getMedicineName().equals(medicineName));
         saveAll(list);
     }
 
     private void saveAll(List<Feedback> list) throws IOException {
+        // Create directory if it doesn't exist
+        File file = new File(FILE_PATH);
+        File directory = file.getParentFile();
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
             oos.writeObject(list);
         }
