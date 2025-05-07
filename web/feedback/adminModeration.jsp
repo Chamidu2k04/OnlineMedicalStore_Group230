@@ -38,7 +38,7 @@
 <div class="feedback-container">
     <div class="admin-header">
         <h1>Admin Feedback Moderation</h1>
-        <a href="../index.jsp">Back to Home</a>
+        <a href="feedbackIndex.jsp">Back to Home</a>
     </div>
 
     <section class="feedback-list">

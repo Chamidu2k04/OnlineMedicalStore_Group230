@@ -45,6 +45,7 @@
                 </div>
 
                 <button type="submit">Submit Feedback</button>
+                <button> <a href="feedbackIndex.jsp">Back</a></button>
             </form>
 
         </section>
