@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9844691-46d5-43c7-a4ef-2d2fdcfa442e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +63,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build",
+    "settings.editor.selected.configurable": "preferences.applicationServers",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -284,7 +283,7 @@
       <updated>1746592218770</updated>
       <workItem from="1746592220070" duration="54000" />
       <workItem from="1746592374606" duration="1619000" />
-      <workItem from="1746594156012" duration="1625000" />
+      <workItem from="1746594156012" duration="4052000" />
     </task>
     <servers />
   </component>
