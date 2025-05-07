@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #b2d9f2;
+    background-color: #f7f7f7;
     color: #333;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
 .feedback-container {
     width: 80%;
     margin: 50px auto;
-    background-color: #ceecff;
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -186,7 +186,7 @@ button {
 }
 
 .option-card {
-    background-color: #a0ceec;
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     width: 250px;

@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9844691-46d5-43c7-a4ef-2d2fdcfa442e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/FeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/FeedbackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/feedback/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/adminModeration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/feedback/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/feedback/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/viewFeedbacks.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +283,7 @@
       <updated>1746592218770</updated>
       <workItem from="1746592220070" duration="54000" />
       <workItem from="1746592374606" duration="1619000" />
-      <workItem from="1746594156012" duration="7296000" />
+      <workItem from="1746594156012" duration="7678000" />
     </task>
     <servers />
   </component>
