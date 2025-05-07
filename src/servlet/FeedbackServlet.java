@@ -26,7 +26,7 @@ public class FeedbackServlet  extends HttpServlet {
             //store in the file
              new FeedbackStorage().addFeedback(feedback);
             //redirect to thank you page
-            response.sendRedirect("feedbackSuccess.jsp");
+            response.sendRedirect("/feedbackSuccess.jsp");
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Error saving feedback" , e);
         }
