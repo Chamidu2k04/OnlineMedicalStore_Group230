@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9844691-46d5-43c7-a4ef-2d2fdcfa442e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/feedback/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/adminModeration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/feedback/feedbackSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/feedbackSuccess.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/feedback/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/feedbackIndex.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.servlet-api.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,13 @@
     "accountId": "3aa2bd29-0fc4-4ad4-9302-491977146819"
   }
 }]]></component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -43,9 +49,10 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Tomcat Server.Tomcat 11.0.6.executor": "Run",
     "git-widget-placeholder": "feedback-&&-review",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chami/Documents/GitHub/OnlineMedicalStore_Group230/web/feedback",
+    "last_opened_file_path": "C:/Users/chami/Documents/GitHub/OnlineMedicalStore_Group230/lib/javax.servlet-api-4.0.1.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,7 +61,7 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "configurable.group.build",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -166,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746592218770</updated>
       <workItem from="1746592220070" duration="54000" />
-      <workItem from="1746592374606" duration="1165000" />
+      <workItem from="1746592374606" duration="1511000" />
     </task>
     <servers />
   </component>
