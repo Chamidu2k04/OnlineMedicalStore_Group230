@@ -40,7 +40,7 @@
     <p>Your feedback has been successfully submitted. We appreciate your input as it helps us improve our products and services.</p>
 
     <div class="action-links">
-      <a href="index.jsp">Return to Home</a>
+      <a href="feedbackIndex.jsp">Return to Home</a>
       <a href="viewFeedbacks">View All Feedbacks</a>
     </div>
   </div>
