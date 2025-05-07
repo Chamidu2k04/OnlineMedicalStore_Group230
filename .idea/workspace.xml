@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9844691-46d5-43c7-a4ef-2d2fdcfa442e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,18 +21,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Chamidu2k04"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Chamidu2k04&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Chamidu2k04/OnlineMedicalStore_Group230.git",
-    "accountId": "3aa2bd29-0fc4-4ad4-9302-491977146819"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Chamidu2k04/OnlineMedicalStore_Group230.git&quot;,
+    &quot;accountId&quot;: &quot;3aa2bd29-0fc4-4ad4-9302-491977146819&quot;
   }
-}]]></component>
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -53,10 +54,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Tomcat Server.Tomcat 11.0.6.executor": "Run",
+    "Tomcat Server.feedbackIndex.jsp (1).executor": "Run",
     "Tomcat Server.feedbackIndex.jsp.executor": "Run",
     "git-widget-placeholder": "feedback-&&-review",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chami/Documents/GitHub/OnlineMedicalStore_Group230/lib/javax.servlet-api-4.0.1.jar",
+    "last_opened_file_path": "C:/Users/chami/Documents/GitHub/OnlineMedicalStore_Group230/web/feedback",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,14 +75,14 @@
     <configuration name="Tomcat 11.0.6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.6" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
+        <artifact name="OnlineMedicalStore_Group230:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/OnlineMedicalStore_Group230_Web_exploded" />
+          </settings>
+        </artifact>
         <file path="$PROJECT_DIR$">
           <settings>
             <option name="CONTEXT_PATH" value="/OnlineMedicalStore_Group230" />
-          </settings>
-        </file>
-        <file path="$PROJECT_DIR$/web/feedback">
-          <settings>
-            <option name="CONTEXT_PATH" value="/feedback" />
           </settings>
         </file>
       </deployment>
@@ -157,6 +159,9 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="OnlineMedicalStore_Group230:Web exploded" />
+        </option>
       </method>
     </configuration>
     <configuration name="feedbackIndex.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 11.0.6" ALTERNATIVE_JRE_ENABLED="false">
@@ -167,15 +172,68 @@
             <option name="CONTEXT_PATH" value="/OnlineMedicalStore_Group230_Web_exploded" />
           </settings>
         </artifact>
+        <file path="$PROJECT_DIR$/web/feedback">
+          <settings>
+            <option name="CONTEXT_PATH" value="/feedback" />
+          </settings>
+        </file>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="ce9be882-752d-41e2-9ca4-88e5c7ab17de" />
+        <option name="BASE_DIRECTORY_NAME" value="61ab4078-9082-48ac-86ec-fb2cd9e3473b" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52114" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -226,6 +284,7 @@
       <updated>1746592218770</updated>
       <workItem from="1746592220070" duration="54000" />
       <workItem from="1746592374606" duration="1619000" />
+      <workItem from="1746594156012" duration="1625000" />
     </task>
     <servers />
   </component>
