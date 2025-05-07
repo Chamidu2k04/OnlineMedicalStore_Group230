@@ -17,18 +17,22 @@ public class Feedback implements Serializable {
     }
 
     public String getMedicineName() {
+
         return medicineName;
     }
 
     public String getUserName() {
+
         return userName;
     }
 
     public String getFeedback() {
+
         return feedback;
     }
 
     public int getRating() {
+
         return rating;
     }
 }
