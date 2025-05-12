@@ -41,7 +41,7 @@
 
     <div class="action-links">
       <a href="feedbackIndex.jsp">Return to Home</a>
-      <a href="viewFeedbacks">View All Feedbacks</a>
+      <a href="viewFeedbacks.jsp">View All Feedbacks</a>
     </div>
   </div>
 </div>
