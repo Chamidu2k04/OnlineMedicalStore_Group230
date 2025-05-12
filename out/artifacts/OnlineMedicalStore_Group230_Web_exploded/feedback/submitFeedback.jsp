@@ -16,7 +16,7 @@
         <!-- Feedback Submission Form -->
         <section class="feedback-form">
             <h2>Submit Your Feedback</h2>
-            <form action="/submitFeedback" method="post">
+            <form action="${pageContext.request.contextPath}/submitFeedback" method="post">
             <label for="medicine">Medicine Name:</label>
                 <input type="text" id="medicine" name="medicine" placeholder="Enter medicine name" required>
 

@@ -10,7 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9844691-46d5-43c7-a4ef-2d2fdcfa442e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/web/feedback/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Feedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/service/FeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/service/FeedbackService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/adminModeration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/viewFeedbacks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/model/Feedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/service/FeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/service/FeedbackService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/FeedbackServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/FeedbackServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/FeedbackStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/FeedbackStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/feedback/submitFeedback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/submitFeedback.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +68,7 @@
     "Tomcat Server.feedbackIndex.jsp.executor": "Run",
     "git-widget-placeholder": "feedback-&&-review",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chami/Documents/GitHub/OnlineMedicalStore_Group230/web/feedback",
+    "last_opened_file_path": "C:/Users/chami/Documents/GitHub/OnlineMedicalStore_Group230/web/WEB-INF/data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +81,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chami\Documents\GitHub\OnlineMedicalStore_Group230\web\WEB-INF\data" />
+    </key>
+  </component>
   <component name="RunManager" selected="Tomcat Server.feedbackIndex.jsp">
     <configuration name="Tomcat 11.0.6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.6" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -284,6 +300,9 @@
       <workItem from="1746592220070" duration="54000" />
       <workItem from="1746592374606" duration="1619000" />
       <workItem from="1746594156012" duration="7678000" />
+      <workItem from="1746772402168" duration="96000" />
+      <workItem from="1746794467629" duration="1656000" />
+      <workItem from="1747054350167" duration="1538000" />
     </task>
     <servers />
   </component>

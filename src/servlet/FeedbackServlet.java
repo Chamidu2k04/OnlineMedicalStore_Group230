@@ -10,6 +10,7 @@ import java.io.IOException;
 
 @WebServlet("/submitFeedback")
 public class FeedbackServlet  extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //get values from form
         String medicine = request.getParameter("medicine");
