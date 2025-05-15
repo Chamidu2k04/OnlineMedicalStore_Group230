@@ -42,11 +42,15 @@
         <div class="form-card">
             <h2 class="form-header text-center mb-4"><i class="fas fa-pills"></i> Add New Medicine</h2>
 
+<<<<<<< Updated upstream
             <c:if test="${not empty error}">
                 <div class="alert alert-danger" role="alert">
                         ${error}
                 </div>
             </c:if>
+=======
+            <br>
+>>>>>>> Stashed changes
 
             <form action="${pageContext.request.contextPath}/medicine/add" method="post">
                 <div class="mb-3 row">

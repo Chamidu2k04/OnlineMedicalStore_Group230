@@ -69,11 +69,15 @@
             <h2 class="mb-0">Edit Medicine</h2>
         </div>
 
+<<<<<<< Updated upstream
         <c:if test="${not empty error}">
             <div class="alert alert-danger" role="alert">
                 <i class="bi bi-exclamation-triangle-fill me-2"></i> ${error}
             </div>
         </c:if>
+=======
+       <br>
+>>>>>>> Stashed changes
 
         <form action="${pageContext.request.contextPath}/medicine/edit" method="post">
             <input type="hidden" name="id" value="${medicine.id}">

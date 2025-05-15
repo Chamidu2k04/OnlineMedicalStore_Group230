@@ -31,6 +31,7 @@
 <body>
 <div class="container mt-4">
     <h1 class="text-primary"><i class="fas fa-pills me-2"></i>Medicine Inventory</h1>
+<<<<<<< Updated upstream
 
     <c:if test="${not empty error}">
         <div class="alert alert-danger" role="alert">
@@ -40,6 +41,12 @@
 
     <div class="d-flex justify-content-between mb-4">
         <a href="${pageContext.request.contextPath}/medicine/add" class="btn btn-success">
+=======
+    <br>
+
+    <div class="d-flex justify-content-between mb-4">
+        <a href="addMedicine.jsp" class="btn btn-success">
+>>>>>>> Stashed changes
             <i class="fas fa-plus-circle me-1"></i>Add New Medicine
         </a>
         <a href="${pageContext.request.contextPath}/medicine/sort?sortBy=price&order=asc" class="btn btn-info text-white">
@@ -61,12 +68,17 @@
     </div>
 
     <div class="filters-container">
+<<<<<<< Updated upstream
         <a href="${pageContext.request.contextPath}/medicine/low-stock" class="btn btn-warning btn-sm">
             <i class="fas fa-exclamation-triangle me-1"></i>Low Stock
         </a>
         <a href="${pageContext.request.contextPath}/medicine/expiring" class="btn btn-danger btn-sm">
             <i class="fas fa-calendar-times me-1"></i>Expiring Soon
         </a>
+=======
+
+
+>>>>>>> Stashed changes
         <form action="${pageContext.request.contextPath}/medicine/category" method="get" class="d-flex align-items-center">
             <select name="category" class="form-select form-select-sm" style="width: 150px;">
                 <option value="">All Categories</option>

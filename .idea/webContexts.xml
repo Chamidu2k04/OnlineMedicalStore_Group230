@@ -4,6 +4,11 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/web/medicine/listMedicine.jsp" value="file://$PROJECT_DIR$/web/medicine" />
+<<<<<<< Updated upstream
+=======
+        <entry key="file://$PROJECT_DIR$/web/medicine/medicineIndex.jsp" value="file://$PROJECT_DIR$/web/medicine" />
+        <entry key="file://$PROJECT_DIR$/web/medicine/sortMedicine.jsp" value="file://$PROJECT_DIR$/web/medicine" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>

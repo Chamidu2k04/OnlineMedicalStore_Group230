@@ -151,7 +151,11 @@
     <div class="row mt-4">
         <div class="col-md-12">
             <div class="d-flex justify-content-between">
+<<<<<<< Updated upstream
                 <a href="addMedicine" class="btn btn-success"><i class="bi bi-plus-circle"></i> Add New Medicine</a>
+=======
+                <a href="addMedicine.jsp" class="btn btn-success"><i class="bi bi-plus-circle"></i> Add New Medicine</a>
+>>>>>>> Stashed changes
                 <a href="dashboard" class="btn btn-outline-primary"><i class="bi bi-arrow-left-circle"></i> Back to Dashboard</a>
             </div>
         </div>

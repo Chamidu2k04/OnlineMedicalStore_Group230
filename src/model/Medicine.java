@@ -5,10 +5,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
+<<<<<<< Updated upstream
 /**
  * Medicine class representing the medicine entity in the system.
  * Implements Serializable to support file-based storage.
  */
+=======
+>>>>>>> Stashed changes
 public class Medicine implements Serializable {
     private String id;
     private String name;
@@ -29,8 +32,12 @@ public class Medicine implements Serializable {
     }
 
     // Parameterized constructor
+<<<<<<< Updated upstream
     public Medicine(String name, String manufacturer, double price, int quantity,
                     LocalDate expiryDate, String description, String category, boolean requiresPrescription) {
+=======
+    public Medicine(String name, String manufacturer, double price, int quantity, LocalDate expiryDate, String description, String category, boolean requiresPrescription) {
+>>>>>>> Stashed changes
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.manufacturer = manufacturer;
