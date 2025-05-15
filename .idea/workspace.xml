@@ -9,15 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a661e9da-68c5-4050-b6ed-7984d4622502" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/medicine/addMedicine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/medicine/addMedicine.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/medicine/editMedicine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/medicine/editMedicine.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/medicine/listMedicine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/medicine/listMedicine.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/medicine/sortMedicine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/medicine/sortMedicine.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/medicine/addMedicine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/medicine/addMedicine.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/medicine/editMedicine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/medicine/editMedicine.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="a661e9da-68c5-4050-b6ed-7984d4622502" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
