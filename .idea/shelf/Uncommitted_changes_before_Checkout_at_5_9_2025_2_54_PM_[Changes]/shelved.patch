@@ -1,0 +1,469 @@
+Index: src/main/admin/servlet/UserServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.admin.servlet;\r\n\r\nimport main.admin.service.UserAdminService;\r\nimport main.java.model.User;\r\n\r\nimport javax.servlet.ServletException;\r\nimport javax.servlet.annotation.WebServlet;\r\nimport javax.servlet.http.HttpServlet;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport javax.servlet.http.HttpServletResponse;\r\nimport java.io.IOException;\r\n\r\n@WebServlet(\"/admin/user\")\r\npublic class UserServlet extends HttpServlet {\r\n    private UserAdminService userService;\r\n\r\n    @Override\r\n    public void init() throws ServletException {\r\n        userService = new UserAdminService();\r\n    }\r\n\r\n    @Override\r\n    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        String action = request.getParameter(\"action\");\r\n        if (action == null) {\r\n            action = \"list\";\r\n        }\r\n\r\n        switch (action) {\r\n            case \"list\":\r\n                listUsers(request, response);\r\n                break;\r\n            case \"view\":\r\n                viewUser(request, response);\r\n                break;\r\n            case \"add\":\r\n                showAddForm(request, response);\r\n                break;\r\n            case \"edit\":\r\n                showEditForm(request, response);\r\n                break;\r\n            case \"delete\":\r\n                deleteUser(request, response);\r\n                break;\r\n            case \"search\":\r\n                searchUsers(request, response);\r\n                break;\r\n            default:\r\n                listUsers(request, response);\r\n        }\r\n    }\r\n\r\n    @Override\r\n    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        String action = request.getParameter(\"action\");\r\n\r\n        switch (action) {\r\n            case \"add\":\r\n                addUser(request, response);\r\n                break;\r\n            case \"update\":\r\n                updateUser(request, response);\r\n                break;\r\n            default:\r\n                listUsers(request, response);\r\n        }\r\n    }\r\n\r\n    private void listUsers(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        request.setAttribute(\"users\", userService.getAllUsers());\r\n        request.getRequestDispatcher(\"/admin/users.jsp\").forward(request, response);\r\n    }\r\n\r\n    private void viewUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        String userId = request.getParameter(\"id\");\r\n        User user = userService.getUserById(userId);\r\n\r\n        if (user != null) {\r\n            request.setAttribute(\"user\", user);\r\n            request.getRequestDispatcher(\"/admin/view-user.jsp\").forward(request, response);\r\n        } else {\r\n            request.setAttribute(\"error\", \"User not found\");\r\n            request.getRequestDispatcher(\"/admin/users.jsp\").forward(request, response);\r\n        }\r\n    }\r\n\r\n    private void showAddForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        request.getRequestDispatcher(\"/admin/add-user.jsp\").forward(request, response);\r\n    }\r\n\r\n    private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        String userId = request.getParameter(\"id\");\r\n        User user = userService.getUserById(userId);\r\n\r\n        if (user != null) {\r\n            request.setAttribute(\"user\", user);\r\n            request.getRequestDispatcher(\"/admin/edit-user.jsp\").forward(request, response);\r\n        } else {\r\n            request.setAttribute(\"error\", \"User not found\");\r\n            request.getRequestDispatcher(\"/admin/users.jsp\").forward(request, response);\r\n        }\r\n    }\r\n\r\n    private void addUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        String username = request.getParameter(\"username\");\r\n        String password = request.getParameter(\"password\");\r\n        String email = request.getParameter(\"email\");\r\n        String fullName = request.getParameter(\"fullName\");\r\n        String role = request.getParameter(\"role\");\r\n\r\n        User newUser = userService.createUser(username, password, email, fullName, role);\r\n\r\n        if (newUser != null) {\r\n            request.setAttribute(\"message\", \"User added successfully\");\r\n        } else {\r\n            request.setAttribute(\"error\", \"Username already exists\");\r\n        }\r\n\r\n        listUsers(request, response);\r\n    }\r\n\r\n    private void updateUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        String userId = request.getParameter(\"userId\");\r\n        String username = request.getParameter(\"username\");\r\n        String email = request.getParameter(\"email\");\r\n        String fullName = request.getParameter(\"fullName\");\r\n        String role = request.getParameter(\"role\");\r\n\r\n        User user = userService.getUserById(userId);\r\n\r\n        if (user != null) {\r\n            user.setUsername(username);\r\n            user.setEmail(email);\r\n            user.setFullName(fullName);\r\n            user.setRole(role);\r\n\r\n            boolean updated = userService.updateUser(user);\r\n\r\n            if (updated) {\r\n                request.setAttribute(\"message\", \"User updated successfully\");\r\n            } else {\r\n                request.setAttribute(\"error\", \"Failed to update user\");\r\n            }\r\n        } else {\r\n            request.setAttribute(\"error\", \"User not found\");\r\n        }\r\n\r\n        listUsers(request, response);\r\n    }\r\n\r\n    private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        String userId = request.getParameter(\"id\");\r\n\r\n        boolean deleted = userService.deleteUser(userId);\r\n\r\n        if (deleted) {\r\n            request.setAttribute(\"message\", \"User deleted successfully\");\r\n        } else {\r\n            request.setAttribute(\"error\", \"Failed to delete user\");\r\n        }\r\n\r\n        listUsers(request, response);\r\n    }\r\n\r\n    private void searchUsers(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n        String searchTerm = request.getParameter(\"searchTerm\");\r\n\r\n        if (searchTerm != null && !searchTerm.trim().isEmpty()) {\r\n            request.setAttribute(\"users\", userService.searchUsers(searchTerm));\r\n            request.setAttribute(\"searchTerm\", searchTerm);\r\n        } else {\r\n            request.setAttribute(\"users\", userService.getAllUsers());\r\n        }\r\n\r\n        request.getRequestDispatcher(\"/admin/users.jsp\").forward(request, response);\r\n    }\r\n}
+===================================================================
+diff --git a/src/main/admin/servlet/UserServlet.java b/src/main/admin/servlet/UserServlet.java
+--- a/src/main/admin/servlet/UserServlet.java	(revision 5ccf83781f7f0402a76b7153e28da12538b12557)
++++ b/src/main/admin/servlet/UserServlet.java	(date 1746781897663)
+@@ -93,7 +93,7 @@
+         User user = userService.getUserById(userId);
+ 
+         if (user != null) {
+-            request.setAttribute("user", user);
++            request .setAttribute("user", user);
+             request.getRequestDispatcher("/admin/edit-user.jsp").forward(request, response);
+         } else {
+             request.setAttribute("error", "User not found");
+Index: web/admin/users.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<%@ page import=\"main.java.model.User\" %>\r\n<%@ page import=\"java.util.List\" %>\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Admin - User Management</title>\r\n    <style>\r\n        body {\r\n            font-family: Arial, sans-serif;\r\n            margin: 0;\r\n            padding: 20px;\r\n            background-color: #f4f4f4;\r\n        }\r\n        .container {\r\n            max-width: 1200px;\r\n            margin: 0 auto;\r\n            background: white;\r\n            padding: 20px;\r\n            box-shadow: 0 0 10px rgba(0,0,0,0.1);\r\n        }\r\n        h1 {\r\n            color: #333;\r\n            border-bottom: 1px solid #ddd;\r\n            padding-bottom: 10px;\r\n        }\r\n        .message {\r\n            padding: 10px;\r\n            margin-bottom: 20px;\r\n            border-radius: 5px;\r\n        }\r\n        .success {\r\n            background-color: #d4edda;\r\n            color: #155724;\r\n        }\r\n        .error {\r\n            background-color: #f8d7da;\r\n            color: #721c24;\r\n        }\r\n        table {\r\n            width: 100%;\r\n            border-collapse: collapse;\r\n            margin-top: 20px;\r\n        }\r\n        th, td {\r\n            padding: 12px;\r\n            text-align: left;\r\n            border-bottom: 1px solid #ddd;\r\n        }\r\n        th {\r\n            background-color: #f2f2f2;\r\n        }\r\n        tr:hover {\r\n            background-color: #f5f5f5;\r\n        }\r\n        .btn {\r\n            display: inline-block;\r\n            padding: 8px 12px;\r\n            margin: 5px;\r\n            text-decoration: none;\r\n            border-radius: 4px;\r\n            color: white;\r\n            font-size: 14px;\r\n        }\r\n        .btn-add {\r\n            background-color: #28a745;\r\n        }\r\n        .btn-view {\r\n            background-color: #17a2b8;\r\n        }\r\n        .btn-edit {\r\n            background-color: #ffc107;\r\n            color: #212529;\r\n        }\r\n        .btn-delete {\r\n            background-color: #dc3545;\r\n        }\r\n        .search-box {\r\n            margin: 20px 0;\r\n            padding: 10px;\r\n            background: #f9f9f9;\r\n            border-radius: 5px;\r\n            display: flex;\r\n        }\r\n        .search-box input[type=\"text\"] {\r\n            flex-grow: 1;\r\n            padding: 8px;\r\n            border: 1px solid #ddd;\r\n            border-radius: 4px 0 0 4px;\r\n        }\r\n        .search-box button {\r\n            padding: 8px 15px;\r\n            background: #4CAF50;\r\n            color: white;\r\n            border: none;\r\n            border-radius: 0 4px 4px 0;\r\n            cursor: pointer;\r\n        }\r\n        .actions {\r\n            display: flex;\r\n            gap: 5px;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n<div class=\"container\">\r\n    <h1>User Management</h1>\r\n\r\n    <!-- Message display -->\r\n    <% if(request.getAttribute(\"message\") != null) { %>\r\n    <div class=\"message success\">\r\n        <%= request.getAttribute(\"message\") %>\r\n    </div>\r\n    <% } %>\r\n\r\n    <% if(request.getAttribute(\"error\") != null) { %>\r\n    <div class=\"message error\">\r\n        <%= request.getAttribute(\"error\") %>\r\n    </div>\r\n    <% } %>\r\n\r\n    <!-- Search Box -->\r\n    <div class=\"search-box\">\r\n        <form action=\"${pageContext.request.contextPath}/admin/user\" method=\"get\">\r\n            <input type=\"hidden\" name=\"action\" value=\"search\">\r\n            <input type=\"text\" name=\"searchTerm\" placeholder=\"Search users...\"\r\n                   value=\"<%= request.getAttribute(\"searchTerm\") != null ? request.getAttribute(\"searchTerm\") : \"\" %>\">\r\n            <button type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n\r\n    <!-- Add User Button -->\r\n    <div>\r\n        <a href=\"${pageContext.request.contextPath}/admin/user?action=add\" class=\"btn btn-add\">Add New User</a>\r\n    </div>\r\n\r\n    <!-- Users Table -->\r\n    <table>\r\n        <thead>\r\n        <tr>\r\n            <th>ID</th>\r\n            <th>Username</th>\r\n            <th>Full Name</th>\r\n            <th>Email</th>\r\n            <th>Role</th>\r\n            <th>Actions</th>\r\n        </tr>\r\n        </thead>\r\n        <tbody>\r\n        <%\r\n            List<User> users = (List<User>) request.getAttribute(\"users\");\r\n            if(users != null && !users.isEmpty()) {\r\n                for(User user : users) {\r\n        %>\r\n        <tr>\r\n            <td><%= user.getUserId() %></td>\r\n            <td><%= user.getUsername() %></td>\r\n            <td><%= user.getFullName() %></td>\r\n            <td><%= user.getEmail() %></td>\r\n            <td><%= user.getRole() %></td>\r\n            <td class=\"actions\">\r\n                <a href=\"${pageContext.request.contextPath}/admin/user?action=view&id=<%= user.getUserId() %>\" class=\"btn btn-view\">View</a>\r\n                <a href=\"${pageContext.request.contextPath}/admin/user?action=edit&id=<%= user.getUserId() %>\" class=\"btn btn-edit\">Edit</a>\r\n                <a href=\"${pageContext.request.contextPath}/admin/user?action=delete&id=<%= user.getUserId() %>\"\r\n                   class=\"btn btn-delete\"\r\n                   onclick=\"return confirm('Are you sure you want to delete this user?')\">Delete</a>\r\n            </td>\r\n        </tr>\r\n        <%\r\n            }\r\n        } else {\r\n        %>\r\n        <tr>\r\n            <td colspan=\"6\">No users found</td>\r\n        </tr>\r\n        <% } %>\r\n        </tbody>\r\n    </table>\r\n\r\n    <div style=\"margin-top: 20px;\">\r\n        <a href=\"${pageContext.request.contextPath}/index.jsp\">Back to Home</a>\r\n    </div>\r\n</div>\r\n</body>\r\n</html>
+===================================================================
+diff --git a/web/admin/users.jsp b/web/admin/users.jsp
+--- a/web/admin/users.jsp	(revision 5ccf83781f7f0402a76b7153e28da12538b12557)
++++ b/web/admin/users.jsp	(date 1746620468427)
+@@ -1,10 +1,10 @@
+ <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+ <%@ page import="main.java.model.User" %>
+-<%@ page import="java.util.List" %>
+ <!DOCTYPE html>
+ <html>
+ <head>
+-    <title>Admin - User Management</title>
++    <meta charset="UTF-8">
++    <title>Admin - Edit User</title>
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+@@ -13,7 +13,7 @@
+             background-color: #f4f4f4;
+         }
+         .container {
+-            max-width: 1200px;
++            max-width: 600px;
+             margin: 0 auto;
+             background: white;
+             padding: 20px;
+@@ -24,162 +24,75 @@
+             border-bottom: 1px solid #ddd;
+             padding-bottom: 10px;
+         }
+-        .message {
+-            padding: 10px;
+-            margin-bottom: 20px;
+-            border-radius: 5px;
++        .form-group {
++            margin-bottom: 15px;
+         }
+-        .success {
+-            background-color: #d4edda;
+-            color: #155724;
++        label {
++            display: block;
++            margin-bottom: 5px;
++            font-weight: bold;
+         }
+-        .error {
+-            background-color: #f8d7da;
+-            color: #721c24;
+-        }
+-        table {
++        input, select {
+             width: 100%;
+-            border-collapse: collapse;
+-            margin-top: 20px;
+-        }
+-        th, td {
+-            padding: 12px;
+-            text-align: left;
+-            border-bottom: 1px solid #ddd;
+-        }
+-        th {
+-            background-color: #f2f2f2;
+-        }
+-        tr:hover {
+-            background-color: #f5f5f5;
++            padding: 8px;
++            box-sizing: border-box;
++            border: 1px solid #ddd;
++            border-radius: 4px;
+         }
+         .btn {
+             display: inline-block;
+-            padding: 8px 12px;
+-            margin: 5px;
++            padding: 10px 15px;
+             text-decoration: none;
++            background-color: #4CAF50;
++            color: white;
+             border-radius: 4px;
+-            color: white;
+-            font-size: 14px;
+-        }
+-        .btn-add {
+-            background-color: #28a745;
+-        }
+-        .btn-view {
+-            background-color: #17a2b8;
+-        }
+-        .btn-edit {
+-            background-color: #ffc107;
+-            color: #212529;
+-        }
+-        .btn-delete {
+-            background-color: #dc3545;
+-        }
+-        .search-box {
+-            margin: 20px 0;
+-            padding: 10px;
+-            background: #f9f9f9;
+-            border-radius: 5px;
+-            display: flex;
+-        }
+-        .search-box input[type="text"] {
+-            flex-grow: 1;
+-            padding: 8px;
+-            border: 1px solid #ddd;
+-            border-radius: 4px 0 0 4px;
+-        }
+-        .search-box button {
+-            padding: 8px 15px;
+-            background: #4CAF50;
+-            color: white;
+             border: none;
+-            border-radius: 0 4px 4px 0;
+             cursor: pointer;
+         }
+-        .actions {
+-            display: flex;
+-            gap: 5px;
++        .btn-secondary {
++            background-color: #6c757d;
+         }
+     </style>
+ </head>
+ <body>
+ <div class="container">
+-    <h1>User Management</h1>
++    <h1>Edit User</h1>
++
++    <% User user = (User) request.getAttribute("user"); %>
+ 
+-    <!-- Message display -->
+-    <% if(request.getAttribute("message") != null) { %>
+-    <div class="message success">
+-        <%= request.getAttribute("message") %>
+-    </div>
+-    <% } %>
++    <form action="${pageContext.request.contextPath}/admin/user" method="post">
++        <input type="hidden" name="action" value="update">
++        <input type="hidden" name="userId" value="<%= user.getUserId() %>">
++        <input type="hidden" name="_csrf" value="${_csrf.token}">
++
++        <div class="form-group">
++            <label for="username">Username:</label>
++            <input type="text" id="username" name="username" value="<%= user.getUsername() %>" required>
++        </div>
+ 
+-    <% if(request.getAttribute("error") != null) { %>
+-    <div class="message error">
+-        <%= request.getAttribute("error") %>
+-    </div>
+-    <% } %>
++        <div class="form-group">
++            <label for="email">Email:</label>
++            <input type="email" id="email" name="email" value="<%= user.getEmail() %>" required>
++        </div>
+ 
+-    <!-- Search Box -->
+-    <div class="search-box">
+-        <form action="${pageContext.request.contextPath}/admin/user" method="get">
+-            <input type="hidden" name="action" value="search">
+-            <input type="text" name="searchTerm" placeholder="Search users..."
+-                   value="<%= request.getAttribute("searchTerm") != null ? request.getAttribute("searchTerm") : "" %>">
+-            <button type="submit">Search</button>
+-        </form>
+-    </div>
++        <div class="form-group">
++            <label for="fullName">Full Name:</label>
++            <input type="text" id="fullName" name="fullName" value="<%= user.getFullName() %>" required>
++        </div>
+ 
+-    <!-- Add User Button -->
+-    <div>
+-        <a href="${pageContext.request.contextPath}/admin/user?action=add" class="btn btn-add">Add New User</a>
+-    </div>
++        <div class="form-group">
++            <label for="role">Role:</label>
++            <select id="role" name="role" required>
++                <option value="CUSTOMER" <%= "CUSTOMER".equals(user.getRole()) ? "selected" : "" %>>Customer</option>
++                <option value="ADMIN" <%= "ADMIN".equals(user.getRole()) ? "selected" : "" %>>Admin</option>
++            </select>
++        </div>
+ 
+-    <!-- Users Table -->
+-    <table>
+-        <thead>
+-        <tr>
+-            <th>ID</th>
+-            <th>Username</th>
+-            <th>Full Name</th>
+-            <th>Email</th>
+-            <th>Role</th>
+-            <th>Actions</th>
+-        </tr>
+-        </thead>
+-        <tbody>
+-        <%
+-            List<User> users = (List<User>) request.getAttribute("users");
+-            if(users != null && !users.isEmpty()) {
+-                for(User user : users) {
+-        %>
+-        <tr>
+-            <td><%= user.getUserId() %></td>
+-            <td><%= user.getUsername() %></td>
+-            <td><%= user.getFullName() %></td>
+-            <td><%= user.getEmail() %></td>
+-            <td><%= user.getRole() %></td>
+-            <td class="actions">
+-                <a href="${pageContext.request.contextPath}/admin/user?action=view&id=<%= user.getUserId() %>" class="btn btn-view">View</a>
+-                <a href="${pageContext.request.contextPath}/admin/user?action=edit&id=<%= user.getUserId() %>" class="btn btn-edit">Edit</a>
+-                <a href="${pageContext.request.contextPath}/admin/user?action=delete&id=<%= user.getUserId() %>"
+-                   class="btn btn-delete"
+-                   onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+-            </td>
+-        </tr>
+-        <%
+-            }
+-        } else {
+-        %>
+-        <tr>
+-            <td colspan="6">No users found</td>
+-        </tr>
+-        <% } %>
+-        </tbody>
+-    </table>
+-
+-    <div style="margin-top: 20px;">
+-        <a href="${pageContext.request.contextPath}/index.jsp">Back to Home</a>
+-    </div>
++        <div class="form-group">
++            <button type="submit" class="btn">Update User</button>
++            <a href="${pageContext.request.contextPath}/admin/user" class="btn btn-secondary">Cancel</a>
++        </div>
++    </form>
+ </div>
+ </body>
+ </html>
+\ No newline at end of file
+Index: web/admin/add-user.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Admin - Add User</title>\r\n    <style>\r\n        body {\r\n            font-family: Arial, sans-serif;\r\n            margin: 0;\r\n            padding: 20px;\r\n            background-color: #f4f4f4;\r\n        }\r\n        .container {\r\n            max-width: 600px;\r\n            margin: 0 auto;\r\n            background: white;\r\n            padding: 20px;\r\n            box-shadow: 0 0 10px rgba(0,0,0,0.1);\r\n        }\r\n        h1 {\r\n            color: #333;\r\n            border-bottom: 1px solid #ddd;\r\n            padding-bottom: 10px;\r\n        }\r\n        .form-group {\r\n            margin-bottom: 15px;\r\n        }\r\n        label {\r\n            display: block;\r\n            margin-bottom: 5px;\r\n            font-weight: bold;\r\n        }\r\n        input, select {\r\n            width: 100%;\r\n            padding: 8px;\r\n            box-sizing: border-box;\r\n            border: 1px solid #ddd;\r\n            border-radius: 4px;\r\n        }\r\n        .btn {\r\n            display: inline-block;\r\n            padding: 10px 15px;\r\n            text-decoration: none;\r\n            background-color: #4CAF50;\r\n            color: white;\r\n            border-radius: 4px;\r\n            border: none;\r\n            cursor: pointer;\r\n        }\r\n        .btn-secondary {\r\n            background-color: #6c757d;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n<div class=\"container\">\r\n    <h1>Add New User</h1>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/admin/user\" method=\"post\">\r\n        <input type=\"hidden\" name=\"action\" value=\"add\">\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"username\">Username:</label>\r\n            <input type=\"text\" id=\"username\" name=\"username\" required>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password:</label>\r\n            <input type=\"password\" id=\"password\" name=\"password\" required>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email:</label>\r\n            <input type=\"email\" id=\"email\" name=\"email\" required>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"fullName\">Full Name:</label>\r\n            <input type=\"text\" id=\"fullName\" name=\"fullName\" required>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"role\">Role:</label>\r\n            <select id=\"role\" name=\"role\" required>\r\n                <option value=\"CUSTOMER\">Customer</option>\r\n                <option value=\"ADMIN\">Admin</option>\r\n            </select>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn\">Add User</button>\r\n            <a href=\"${pageContext.request.contextPath}/admin/user\" class=\"btn btn-secondary\">Cancel</a>\r\n        </div>\r\n    </form>\r\n</div>\r\n</body>\r\n</html>
+===================================================================
+diff --git a/web/admin/add-user.jsp b/web/admin/add-user.jsp
+--- a/web/admin/add-user.jsp	(revision 5ccf83781f7f0402a76b7153e28da12538b12557)
++++ b/web/admin/add-user.jsp	(date 1746620976978)
+@@ -2,6 +2,7 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
++    <meta charset="UTF-8">
+     <title>Admin - Add User</title>
+     <style>
+         body {
+@@ -58,6 +59,7 @@
+ 
+     <form action="${pageContext.request.contextPath}/admin/user" method="post">
+         <input type="hidden" name="action" value="add">
++        <input type="hidden" name="_csrf" value="${_csrf.token}">
+ 
+         <div class="form-group">
+             <label for="username">Username:</label>
+Index: web/admin/view-user.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<%@ page import=\"main.java.model.User\" %>\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Admin - View User</title>\r\n    <style>\r\n        body {\r\n            font-family: Arial, sans-serif;\r\n            margin: 0;\r\n            padding: 20px;\r\n            background-color: #f4f4f4;\r\n        }\r\n        .container {\r\n            max-width: 600px;\r\n            margin: 0 auto;\r\n            background: white;\r\n            padding: 20px;\r\n            box-shadow: 0 0 10px rgba(0,0,0,0.1);\r\n        }\r\n        h1 {\r\n            color: #333;\r\n            border-bottom: 1px solid #ddd;\r\n            padding-bottom: 10px;\r\n        }\r\n        .user-info {\r\n            margin-top: 20px;\r\n        }\r\n        .info-item {\r\n            margin-bottom: 15px;\r\n            padding-bottom: 10px;\r\n            border-bottom: 1px solid #eee;\r\n        }\r\n        .label {\r\n            font-weight: bold;\r\n            display: inline-block;\r\n            width: 100px;\r\n        }\r\n        .actions {\r\n            margin-top: 20px;\r\n        }\r\n        .btn {\r\n            display: inline-block;\r\n            padding: 10px 15px;\r\n            text-decoration: none;\r\n            color: white;\r\n            border-radius: 4px;\r\n            margin-right: 10px;\r\n        }\r\n        .btn-edit {\r\n            background-color: #ffc107;\r\n            color: #212529;\r\n        }\r\n        .btn-delete {\r\n            background-color: #dc3545;\r\n        }\r\n        .btn-back {\r\n            background-color: #6c757d;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n<div class=\"container\">\r\n    <h1>User Details</h1>\r\n\r\n        <%\r\n        User user = (User) request.getAttribute(\"user\");\r\n        if(user != null) {\r\n        %>\r\n\r\n    <div class=\"user-info\">\r\n        <div class=\"info-item\">\r\n            <span class=\"label\">User ID:</span>\r\n            <span><%= user.getUserId() %></span>\r\n        </div>\r\n        <div class=\"info-item\">\r\n            <span class=\"label\">Username:</span>\r\n            <span><%= user.getUsername() %></span>\r\n        </div>\r\n        <div class=\"info-item\">\r\n            <span class=\"label\">Full Name:</span>\r\n            <span><%= user.getFullName() %></span>\r\n        </div>\r\n        <div class=\"info-item\">\r\n            <span class=\"label\">Email:</span>\r\n            <span><%= user.getEmail() %></span>\r\n        </div>\r\n        <div class=\"info-item\">\r\n            <span class=\"label\">Role:</span>\r\n            <span><%= user.getRole() %></span>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"actions\">\r\n        <a href=\"${pageContext.request.contextPath}/admin/user?action=edit&id=<%= user.getUserId() %>\" class=\"btn btn-edit\">Edit</a>\r\n        <a href=\"${pageContext.request.contextPath}/admin/user?action=delete&id=<%= user.getUserId() %>\"\r\n           class=\"btn
+===================================================================
+diff --git a/web/admin/view-user.jsp b/web/admin/view-user.jsp
+--- a/web/admin/view-user.jsp	(revision 5ccf83781f7f0402a76b7153e28da12538b12557)
++++ b/web/admin/view-user.jsp	(date 1746620899090)
+@@ -1,8 +1,10 @@
+ <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+ <%@ page import="main.java.model.User" %>
++<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+ <!DOCTYPE html>
+ <html>
+ <head>
++    <meta charset="UTF-8">
+     <title>Admin - View User</title>
+     <style>
+         body {
+@@ -63,35 +65,42 @@
+ <div class="container">
+     <h1>User Details</h1>
+ 
+-        <%
+-        User user = (User) request.getAttribute("user");
+-        if(user != null) {
+-        %>
+-
+-    <div class="user-info">
+-        <div class="info-item">
+-            <span class="label">User ID:</span>
+-            <span><%= user.getUserId() %></span>
+-        </div>
+-        <div class="info-item">
+-            <span class="label">Username:</span>
+-            <span><%= user.getUsername() %></span>
+-        </div>
+-        <div class="info-item">
+-            <span class="label">Full Name:</span>
+-            <span><%= user.getFullName() %></span>
+-        </div>
+-        <div class="info-item">
+-            <span class="label">Email:</span>
+-            <span><%= user.getEmail() %></span>
+-        </div>
+-        <div class="info-item">
+-            <span class="label">Role:</span>
+-            <span><%= user.getRole() %></span>
+-        </div>
+-    </div>
++    <c:if test="${not empty user}">
++        <div class="user-info">
++            <div class="info-item">
++                <span class="label">User ID:</span>
++                <span><c:out value="${user.userId}"/></span>
++            </div>
++            <div class="info-item">
++                <span class="label">Username:</span>
++                <span><c:out value="${user.username}"/></span>
++            </div>
++            <div class="info-item">
++                <span class="label">Full Name:</span>
++                <span><c:out value="${user.fullName}"/></span>
++            </div>
++            <div class="info-item">
++                <span class="label">Email:</span>
++                <span><c:out value="${user.email}"/></span>
++            </div>
++            <div class="info-item">
++                <span class="label">Role:</span>
++                <span><c:out value="${user.role}"/></span>
++            </div>
++        </div>
+ 
+-    <div class="actions">
+-        <a href="${pageContext.request.contextPath}/admin/user?action=edit&id=<%= user.getUserId() %>" class="btn btn-edit">Edit</a>
+-        <a href="${pageContext.request.contextPath}/admin/user?action=delete&id=<%= user.getUserId() %>"
+-           class="btn
+\ No newline at end of file
++        <div class="actions">
++            <a href="${pageContext.request.contextPath}/admin/user?action=edit&id=${user.userId}" class="btn btn-edit">Edit</a>
++            <form action="${pageContext.request.contextPath}/admin/user" method="post" style="display:inline;">
++                <input type="hidden" name="action" value="delete">
++                <input type="hidden" name="id" value="${user.userId}">
++                <input type="hidden" name="_csrf" value="${_csrf.token}">
++                <button type="submit" class="btn btn-delete"
++                        onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
++            </form>
++            <a href="${pageContext.request.contextPath}/admin/user" class="btn btn-back">Back</a>
++        </div>
++    </c:if>
++</div>
++</body>
++</html>
+\ No newline at end of file
+Index: web/admin/edit-user.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<%@ page import=\"main.java.model.User\" %>\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Admin - Edit User</title>\r\n    <style>\r\n        body {\r\n            font-family: Arial, sans-serif;\r\n            margin: 0;\r\n            padding: 20px;\r\n            background-color: #f4f4f4;\r\n        }\r\n        .container {\r\n            max-width: 600px;\r\n            margin: 0 auto;\r\n            background: white;\r\n            padding: 20px;\r\n            box-shadow: 0 0 10px rgba(0,0,0,0.1);\r\n        }\r\n        h1 {\r\n            color: #333;\r\n            border-bottom: 1px solid #ddd;\r\n            padding-bottom: 10px;\r\n        }\r\n        .form-group {\r\n            margin-bottom: 15px;\r\n        }\r\n        label {\r\n            display: block;\r\n            margin-bottom: 5px;\r\n            font-weight: bold;\r\n        }\r\n        input, select {\r\n            width: 100%;\r\n            padding: 8px;\r\n            box-sizing: border-box;\r\n            border: 1px solid #ddd;\r\n            border-radius: 4px;\r\n        }\r\n        .btn {\r\n            display: inline-block;\r\n            padding: 10px 15px;\r\n            text-decoration: none;\r\n            background-color: #4CAF50;\r\n            color: white;\r\n            border-radius: 4px;\r\n            border: none;\r\n            cursor: pointer;\r\n        }\r\n        .btn-secondary {\r\n            background-color: #6c757d;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n<div class=\"container\">\r\n    <h1>Edit User</h1>\r\n\r\n    <% User user = (User) request.getAttribute(\"user\"); %>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/admin/user\" method=\"post\">\r\n        <input type=\"hidden\" name=\"action\" value=\"update\">\r\n        <input type=\"hidden\" name=\"userId\" value=\"<%= user.getUserId() %>\">\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"username\">Username:</label>\r\n            <input type=\"text\" id=\"username\" name=\"username\" value=\"<%= user.getUsername() %>\" required>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email:</label>\r\n            <input type=\"email\" id=\"email\" name=\"email\" value=\"<%= user.getEmail() %>\" required>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"fullName\">Full Name:</label>\r\n            <input type=\"text\" id=\"fullName\" name=\"fullName\" value=\"<%= user.getFullName() %>\" required>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"role\">Role:</label>\r\n            <select id=\"role\" name=\"role\" required>\r\n                <option value=\"CUSTOMER\" <%= \"CUSTOMER\".equals(user.getRole()) ? \"selected\" : \"\" %>>Customer</option>\r\n                <option value=\"ADMIN\" <%= \"ADMIN\".equals(user.getRole()) ? \"selected\" : \"\" %>>Admin</option>\r\n            </select>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn\">Update User</button>\r\n            <a href=\"${pageContext.request.contextPath}/admin/user\" class=\"btn btn-secondary\">Cancel</a>\r\n        </div>\r\n    </form>\r\n</div>\r\n</body>\r\n</html>
+===================================================================
+diff --git a/web/admin/edit-user.jsp b/web/admin/edit-user.jsp
+--- a/web/admin/edit-user.jsp	(revision 5ccf83781f7f0402a76b7153e28da12538b12557)
++++ b/web/admin/edit-user.jsp	(date 1746620854323)
+@@ -1,9 +1,9 @@
+ <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<%@ page import="main.java.model.User" %>
+ <!DOCTYPE html>
+ <html>
+ <head>
+-    <title>Admin - Edit User</title>
++    <meta charset="UTF-8">
++    <title>Admin - Add User</title>
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+@@ -55,39 +55,42 @@
+ </head>
+ <body>
+ <div class="container">
+-    <h1>Edit User</h1>
+-
+-    <% User user = (User) request.getAttribute("user"); %>
++    <h1>Add New User</h1>
+ 
+     <form action="${pageContext.request.contextPath}/admin/user" method="post">
+-        <input type="hidden" name="action" value="update">
+-        <input type="hidden" name="userId" value="<%= user.getUserId() %>">
++        <input type="hidden" name="action" value="add">
++        <input type="hidden" name="_csrf" value="${_csrf.token}">
+ 
+         <div class="form-group">
+             <label for="username">Username:</label>
+-            <input type="text" id="username" name="username" value="<%= user.getUsername() %>" required>
++            <input type="text" id="username" name="username" required>
++        </div>
++
++        <div class="form-group">
++            <label for="password">Password:</label>
++            <input type="password" id="password" name="password" required>
+         </div>
+ 
+         <div class="form-group">
+             <label for="email">Email:</label>
+-            <input type="email" id="email" name="email" value="<%= user.getEmail() %>" required>
++            <input type="email" id="email" name="email" required>
+         </div>
+ 
+         <div class="form-group">
+             <label for="fullName">Full Name:</label>
+-            <input type="text" id="fullName" name="fullName" value="<%= user.getFullName() %>" required>
++            <input type="text" id="fullName" name="fullName" required>
+         </div>
+ 
+         <div class="form-group">
+             <label for="role">Role:</label>
+             <select id="role" name="role" required>
+-                <option value="CUSTOMER" <%= "CUSTOMER".equals(user.getRole()) ? "selected" : "" %>>Customer</option>
+-                <option value="ADMIN" <%= "ADMIN".equals(user.getRole()) ? "selected" : "" %>>Admin</option>
++                <option value="CUSTOMER">Customer</option>
++                <option value="ADMIN">Admin</option>
+             </select>
+         </div>
+ 
+         <div class="form-group">
+-            <button type="submit" class="btn">Update User</button>
++            <button type="submit" class="btn">Add User</button>
+             <a href="${pageContext.request.contextPath}/admin/user" class="btn btn-secondary">Cancel</a>
+         </div>
+     </form>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" default=\"true\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 5ccf83781f7f0402a76b7153e28da12538b12557)
++++ b/.idea/misc.xml	(date 1746605723331)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" default="true">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
