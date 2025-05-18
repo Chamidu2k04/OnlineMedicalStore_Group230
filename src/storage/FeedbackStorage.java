@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FeedbackStorage {
-    private String FILE_PATH = "C:\\Users\\chami\\Documents\\GitHub\\OnlineMedicalStore_Group230\\Data\\feedback.txt";
+//    private static final String FILE_PATH = "C:/Users/94718/Documents/GitHub/OnlineMedicalStore_Group230/data/feedback.dat";
+    private static final String FILE_PATH = "data/feedback.dat";
+
 
     public void addFeedback(Feedback feedback) throws IOException, ClassNotFoundException {
         List<Feedback> list = getAllFeedbacks();

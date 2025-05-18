@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class FeedbackService {
-    private FeedbackStorage storage;
+    private final FeedbackStorage storage;
 
     public FeedbackService() {
 

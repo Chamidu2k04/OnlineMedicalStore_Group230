@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class Feedback implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
-    private String medicineName, userName, feedback;
+    private String medicineName;
+    private String userName;
+    private String feedback;
     private int rating;
 
     public Feedback(String medicineName, String userName, String feedback, int rating) {
@@ -16,23 +16,13 @@ public class Feedback implements Serializable {
         this.rating = rating;
     }
 
-    public String getMedicineName() {
+    public String getMedicineName() {return medicineName;}
+    public String getUserName() {return userName;}
+    public String getFeedback() {return feedback;}
+    public int getRating() {return rating;}
 
-        return medicineName;
-    }
-
-    public String getUserName() {
-
-        return userName;
-    }
-
-    public String getFeedback() {
-
-        return feedback;
-    }
-
-    public int getRating() {
-
-        return rating;
-    }
+    public void setMedicineName(String medicineName) {this.medicineName = medicineName;}
+    public void setUserName(String userName) {this.userName = userName;}
+    public void setFeedback(String feedback) {this.feedback = feedback;}
+    public void setRating(int rating) {this.rating = rating;}
 }

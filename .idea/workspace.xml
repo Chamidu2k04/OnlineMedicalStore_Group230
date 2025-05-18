@@ -9,18 +9,75 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9844691-46d5-43c7-a4ef-2d2fdcfa442e" name="Changes" comment="">
+    <list default="true" id="969de7df-acf2-4361-8ddb-1723cf7892be" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/styles/addSupplier.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/styles/edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/styles/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/styles/suppliers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OnlineMedicalStore_Group230.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OnlineMedicalStore_Group230.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OnlineMedicalStore_Group230_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/OnlineMedicalStore_Group230_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/feedback.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/controller/supplier/ViewSuppliersServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Feedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Medicine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Supplier.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/service/FeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/service/FeedbackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/adminModeration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/service/MedicineService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/AdminFeedbackServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/DeleteFeedbackServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/DeleteFeedbackServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/FeedbackServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/MedicineServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/ViewFeedbackServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/storage/FeedbackStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/storage/FeedbackStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/storage/SupplierStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/supplier/AddSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/supplier/DeleteSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/supplier/EditSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/util/SortUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/controller/supplier/ViewSuppliersServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/feedbackIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/feedbackIndex.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/feedbackSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/feedbackSuccess.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/submitFeedback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/submitFeedback.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/viewFeedbacks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/model/Supplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/storage/SupplierStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/supplier/AddSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/supplier/DeleteSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/supplier/EditSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/controller/supplier/ViewSuppliersServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/model/Feedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/model/Supplier.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/service/FeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/service/FeedbackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/FeedbackServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/FeedbackServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/AdminFeedbackServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/DeleteFeedbackServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/DeleteFeedbackServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/FeedbackServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/ViewFeedbackServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/storage/FeedbackStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/storage/FeedbackStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/storage/SupplierStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/supplier/AddSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/supplier/DeleteSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/supplier/EditSupplierServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/FeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/FeedbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/AdminFeedbackServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/DeleteFeedbackServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/FeedbackServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/ViewFeedbackServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storage/FeedbackStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/FeedbackStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/feedback/feedbackIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/feedbackIndex.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/feedback/feedbackSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/feedbackSuccess.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/feedback/submitFeedback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/submitFeedback.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +85,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Chamidu2k04&quot;
+    &quot;assignee&quot;: &quot;GehanFonseka&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
@@ -42,6 +108,10 @@
     &quot;url&quot;: &quot;https://github.com/Chamidu2k04/OnlineMedicalStore_Group230.git&quot;,
     &quot;accountId&quot;: &quot;3aa2bd29-0fc4-4ad4-9302-491977146819&quot;
   }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -51,43 +121,59 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2wkixBc4Qy4rZZG2Hw3CeSOVHFM" />
+  <component name="ProjectId" id="2wfGN0PevZMdLgImWuRlwA0CbaG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 11.0.6.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.feedbackIndex.jsp (1).executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.feedbackIndex.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feedback-&amp;&amp;-review&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/chami/Documents/GitHub/OnlineMedicalStore_Group230/web/WEB-INF/data&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Tomcat Server.Tomcat 11.0.6.executor": "Run",
+    "Tomcat Server.Tomcat 9.0.104.executor": "Run",
+    "Tomcat Server.Tomcat 9.0.105.executor": "Run",
+    "Tomcat Server.Tomcat 9.0.85.executor": "Run",
+    "git-widget-placeholder": "feedback-&&-review",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/94718/Documents/GitHub/OnlineMedicalStore_Group230/web",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.applicationServers",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\chami\Documents\GitHub\OnlineMedicalStore_Group230\web\WEB-INF\data" />
+      <recent name="C:\Users\94718\Documents\GitHub\OnlineMedicalStore_Group230\web" />
+      <recent name="C:\Users\94718\Documents\GitHub\OnlineMedicalStore_Group230\web\feedback" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\94718\Documents\GitHub\OnlineMedicalStore_Group230\web" />
+      <recent name="C:\Users\94718\Documents\GitHub\OnlineMedicalStore_Group230\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.feedbackIndex.jsp">
-    <configuration name="Tomcat 11.0.6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.6" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.104" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.104" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="OnlineMedicalStore_Group230:Web exploded">
@@ -95,14 +181,9 @@
             <option name="CONTEXT_PATH" value="/OnlineMedicalStore_Group230_Web_exploded" />
           </settings>
         </artifact>
-        <file path="$PROJECT_DIR$">
-          <settings>
-            <option name="CONTEXT_PATH" value="/OnlineMedicalStore_Group230" />
-          </settings>
-        </file>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="db132292-7647-483e-947e-048905e6649d" />
+        <option name="BASE_DIRECTORY_NAME" value="80d7f8c8-2174-4a96-a47b-dd23b8ae1305" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -110,7 +191,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51523" />
+        <option name="DEBUG_PORT" value="51721" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -179,107 +260,6 @@
         </option>
       </method>
     </configuration>
-    <configuration name="feedbackIndex.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 11.0.6" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/feedback/feedbackIndex.jsp" />
-      <deployment>
-        <artifact name="OnlineMedicalStore_Group230:Web exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/OnlineMedicalStore_Group230_Web_exploded" />
-          </settings>
-        </artifact>
-        <file path="$PROJECT_DIR$/web/feedback">
-          <settings>
-            <option name="CONTEXT_PATH" value="/feedback" />
-          </settings>
-        </file>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="61ab4078-9082-48ac-86ec-fb2cd9e3473b" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="52114" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="OnlineMedicalStore_Group230:Web exploded" />
-        </option>
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Tomcat Server.Tomcat 11.0.6" />
-      <item itemvalue="Tomcat Server.feedbackIndex.jsp" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Tomcat Server.feedbackIndex.jsp" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -292,17 +272,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9844691-46d5-43c7-a4ef-2d2fdcfa442e" name="Changes" comment="" />
-      <created>1746592218770</created>
+      <changelist id="969de7df-acf2-4361-8ddb-1723cf7892be" name="Changes" comment="" />
+      <created>1746425172899</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1746592218770</updated>
-      <workItem from="1746592220070" duration="54000" />
-      <workItem from="1746592374606" duration="1619000" />
-      <workItem from="1746594156012" duration="7678000" />
-      <workItem from="1746772402168" duration="96000" />
-      <workItem from="1746794467629" duration="1656000" />
-      <workItem from="1747054350167" duration="1538000" />
+      <updated>1746425172899</updated>
+      <workItem from="1746425175600" duration="1284000" />
+      <workItem from="1746430599709" duration="18025000" />
+      <workItem from="1746598692816" duration="1279000" />
+      <workItem from="1747204166638" duration="6670000" />
+      <workItem from="1747238944427" duration="6912000" />
+      <workItem from="1747247876845" duration="1141000" />
+      <workItem from="1747249040639" duration="1438000" />
     </task>
     <servers />
   </component>
