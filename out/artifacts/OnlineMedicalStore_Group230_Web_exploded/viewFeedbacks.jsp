@@ -1,5 +1,8 @@
-<html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>View Feedback</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,6 +19,7 @@
     <!-- Displaying Existing Feedbacks -->
     <section class="feedback-list">
         <h2>Previous Feedbacks</h2>
+
         <c:if test="${not empty reviews}">
             <div class="reviews-container">
                 <c:forEach var="review" items="${reviews}">
@@ -30,10 +34,10 @@
                         <div class="feedback-footer">
                             <span class="review-rating">Rating: ${review.rating}/5</span>
                             <div class="stars-display">
-                                <c:forEach begin="1" end="${review.rating}">
+                                <c:forEach begin="1" end="${review.rating}" var="i">
                                     <span class="star filled">&#9733;</span>
                                 </c:forEach>
-                                <c:forEach begin="${review.rating + 1}" end="5">
+                                <c:forEach begin="${review.rating + 1}" end="5" var="i">
                                     <span class="star">&#9733;</span>
                                 </c:forEach>
                             </div>

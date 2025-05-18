@@ -10,75 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="969de7df-acf2-4361-8ddb-1723cf7892be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/styles/addSupplier.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/styles/edit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/styles/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/styles/suppliers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/OnlineMedicalStore_Group230.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OnlineMedicalStore_Group230.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OnlineMedicalStore_Group230_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/OnlineMedicalStore_Group230_Web_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/feedback.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/controller/supplier/ViewSuppliersServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Feedback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Medicine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/model/Supplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/service/FeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/service/FeedbackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/service/MedicineService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/AdminFeedbackServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/DeleteFeedbackServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/DeleteFeedbackServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/FeedbackServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/MedicineServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/servlet/ViewFeedbackServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/storage/FeedbackStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/storage/FeedbackStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/storage/SupplierStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/supplier/AddSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/supplier/DeleteSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/supplier/EditSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/util/FileUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/util/SortUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/controller/supplier/ViewSuppliersServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/feedbackIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/feedbackIndex.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/feedbackSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/feedbackSuccess.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/submitFeedback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/submitFeedback.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/adminModeration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/feedback/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/feedback/adminModeration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/feedback/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/feedback/viewFeedbacks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/WEB-INF/classes/viewFeedbacks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/adminModeration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/adminModeration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/feedback/viewFeedbacks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/model/Supplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/storage/SupplierStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/supplier/AddSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/supplier/DeleteSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/supplier/EditSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/controller/supplier/ViewSuppliersServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/model/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/model/Feedback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/model/Supplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/service/FeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/service/FeedbackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/AdminFeedbackServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/DeleteFeedbackServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/DeleteFeedbackServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/FeedbackServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/servlet/ViewFeedbackServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/storage/FeedbackStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/storage/FeedbackStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/storage/SupplierStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/supplier/AddSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/supplier/DeleteSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/supplier/EditSupplierServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/FeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/FeedbackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminFeedbackServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/DeleteFeedbackServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/FeedbackServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/ViewFeedbackServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/FeedbackStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/FeedbackStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_Web_exploded/viewFeedbacks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/adminModeration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OnlineMedicalStore_Group230/viewFeedbacks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feedback1/DeleteFeedbackServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/feedback1/DeleteFeedbackServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/feedback/feedbackIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/feedbackIndex.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/feedback/feedbackSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/feedbackSuccess.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/feedback/submitFeedback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/submitFeedback.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/adminModeration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/feedback/adminModeration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/adminModeration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/feedback/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/feedback/viewFeedbacks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/viewFeedbacks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/viewFeedbacks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +92,7 @@
     "Tomcat Server.Tomcat 9.0.85.executor": "Run",
     "git-widget-placeholder": "feedback-&&-review",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/94718/Documents/GitHub/OnlineMedicalStore_Group230/web",
+    "last_opened_file_path": "C:/Users/chami/Documents/GitHub/OnlineMedicalStore_Group230/lib/standard-1.1.2.jar",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -284,6 +235,7 @@
       <workItem from="1747238944427" duration="6912000" />
       <workItem from="1747247876845" duration="1141000" />
       <workItem from="1747249040639" duration="1438000" />
+      <workItem from="1747561686628" duration="1394000" />
     </task>
     <servers />
   </component>

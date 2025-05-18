@@ -1,4 +1,4 @@
-package servlet;
+package feedback1;
 
 import service.FeedbackService;
 
