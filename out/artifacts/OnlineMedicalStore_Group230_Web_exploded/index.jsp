@@ -14,6 +14,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="supplier/list.jsp">Suppliers</a></li>
             <li><a href="#">Medicines</a></li>
+            <li><a href="feedback/feedbackIndex.jsp">Feedbacks</a></li>
             <li><a href="#">Orders</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
