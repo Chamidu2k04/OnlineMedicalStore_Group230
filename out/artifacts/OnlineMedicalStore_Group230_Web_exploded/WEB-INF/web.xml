@@ -42,4 +42,32 @@
         <url-pattern>/deleteFeedback</url-pattern>
     </servlet-mapping>
 
+    <!-- Supplier Management Servlets -->
+    <servlet>
+        <servlet-name>AddSupplier</servlet-name>
+        <servlet-class>supplier.AddSupplierServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddSupplier</servlet-name>
+        <url-pattern>/addSupplier</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditSupplier</servlet-name>
+        <servlet-class>supplier.EditSupplierServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditSupplier</servlet-name>
+        <url-pattern>/editSupplier</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteSupplier</servlet-name>
+        <servlet-class>supplier.DeleteSupplierServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteSupplier</servlet-name>
+        <url-pattern>/deleteSupplier</url-pattern>
+    </servlet-mapping>
+
 </web-app>
