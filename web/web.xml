@@ -1,151 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
-                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-         version="4.0">
+<servlet>
+    <servlet-name>AddSupplier</servlet-name>
+    <servlet-class>controller.supplier.AddSupplierServlet</servlet-class>
+</servlet>
 
-    <!-- Medicine Servlets -->
-    <servlet>
-        <servlet-name>AddMedicineServlet</servlet-name>
-        <servlet-class>controller.medicine.AddMedicineServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>AddMedicineServlet</servlet-name>
-        <url-pattern>/medicine/add</url-pattern>
-    </servlet-mapping>
+<servlet-mapping>
+<servlet-name>AddSupplier</servlet-name>
+<url-pattern>/AddSupplierServlet</url-pattern>
+</servlet-mapping>
 
-    <servlet>
-        <servlet-name>EditMedicineServlet</servlet-name>
-        <servlet-class>controller.medicine.EditMedicineServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>EditMedicineServlet</servlet-name>
-        <url-pattern>/medicine/edit</url-pattern>
-    </servlet-mapping>
+<servlet>
+<servlet-name>EditSupplier</servlet-name>
+<servlet-class>controller.supplier.EditSupplierServlet</servlet-class>
+</servlet>
 
-    <servlet>
-        <servlet-name>DeleteMedicineServlet</servlet-name>
-        <servlet-class>controller.medicine.DeleteMedicineServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>DeleteMedicineServlet</servlet-name>
-        <url-pattern>/medicine/delete</url-pattern>
-    </servlet-mapping>
+<servlet-mapping>
+<servlet-name>EditSupplier</servlet-name>
+<url-pattern>/EditSupplierServlet</url-pattern>
+</servlet-mapping>
 
-    <servlet>
-        <servlet-name>ListMedicineServlet</servlet-name>
-        <servlet-class>controller.medicine.ListMedicineServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>ListMedicineServlet</servlet-name>
-        <url-pattern>/medicine/</url-pattern>
-    </servlet-mapping>
+<servlet>
+<servlet-name>DeleteSupplier</servlet-name>
+<servlet-class>controller.supplier.DeleteSupplierServlet</servlet-class>
+</servlet>
 
-    <servlet>
-        <servlet-name>SearchMedicineServlet</servlet-name>
-        <servlet-class>controller.medicine.SearchMedicineServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>SearchMedicineServlet</servlet-name>
-        <url-pattern>/medicine/search</url-pattern>
-    </servlet-mapping>
+<servlet-mapping>
+<servlet-name>DeleteSupplier</servlet-name>
+<url-pattern>/DeleteSupplierServlet</url-pattern>
 
-    <servlet>
-        <servlet-name>SortMedicineServlet</servlet-name>
-        <servlet-class>controller.medicine.SortMedicineServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>SortMedicineServlet</servlet-name>
-        <url-pattern>/medicine/sort</url-pattern>
-    </servlet-mapping>
+<servlet>
+    <servlet-name>AddFeedbackServlet</servlet-name>
+    <servlet-class>servlet.AddFeedbackServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddFeedbackServlet</servlet-name>
+    <url-pattern>/addFeedback</url-pattern>
+</servlet-mapping>
 
-    <servlet>
-        <servlet-name>CategoryMedicineServlet</servlet-name>
-        <servlet-class>controller.medicine.CategoryMedicineServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>CategoryMedicineServlet</servlet-name>
-        <url-pattern>/medicine/category</url-pattern>
-    </servlet-mapping>
+<servlet>
+    <servlet-name>EditFeedbackServlet</servlet-name>
+    <servlet-class>servlet.EditFeedbackServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>EditFeedbackServlet</servlet-name>
+    <url-pattern>/editFeedback</url-pattern>
+</servlet-mapping>
 
-    <!-- Supplier Servlets -->
-    <servlet>
-        <servlet-name>AddSupplier</servlet-name>
-        <servlet-class>controller.supplier.AddSupplierServlet</servlet-class>
-    </servlet>
+<servlet>
+    <servlet-name>DeleteFeedbackServlet</servlet-name>
+    <servlet-class>servlet.DeleteFeedbackServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DeleteFeedbackServlet</servlet-name>
+    <url-pattern>/deleteFeedback</url-pattern>
+</servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>AddSupplier</servlet-name>
-        <url-pattern>/AddSupplierServlet</url-pattern>
-    </servlet-mapping>
+<servlet>
+    <servlet-name>ListFeedbackServlet</servlet-name>
+    <servlet-class>servlet.ListFeedbackServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ListFeedbackServlet</servlet-name>
+    <url-pattern>/listFeedback</url-pattern>
+</servlet-mapping>
 
-    <servlet>
-        <servlet-name>EditSupplier</servlet-name>
-        <servlet-class>controller.supplier.EditSupplierServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>EditSupplier</servlet-name>
-        <url-pattern>/EditSupplierServlet</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>DeleteSupplier</servlet-name>
-        <servlet-class>controller.supplier.DeleteSupplierServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>DeleteSupplier</servlet-name>
-        <url-pattern>/DeleteSupplierServlet</url-pattern>
-    </servlet-mapping>
-
-    <!-- Feedback Servlets -->
-    <servlet>
-        <servlet-name>AddFeedbackServlet</servlet-name>
-        <servlet-class>servlet.AddFeedbackServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>AddFeedbackServlet</servlet-name>
-        <url-pattern>/addFeedback</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>EditFeedbackServlet</servlet-name>
-        <servlet-class>servlet.EditFeedbackServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>EditFeedbackServlet</servlet-name>
-        <url-pattern>/editFeedback</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>DeleteFeedbackServlet</servlet-name>
-        <servlet-class>servlet.DeleteFeedbackServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>DeleteFeedbackServlet</servlet-name>
-        <url-pattern>/deleteFeedback</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ListFeedbackServlet</servlet-name>
-        <servlet-class>servlet.ListFeedbackServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>ListFeedbackServlet</servlet-name>
-        <url-pattern>/listFeedback</url-pattern>
-    </servlet-mapping>
-
-</web-app>
+</servlet-mapping>
