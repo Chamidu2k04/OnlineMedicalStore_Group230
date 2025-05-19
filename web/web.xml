@@ -1,0 +1,66 @@
+<servlet>
+    <servlet-name>AddSupplier</servlet-name>
+    <servlet-class>controller.supplier.AddSupplierServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>AddSupplier</servlet-name>
+<url-pattern>/AddSupplierServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>EditSupplier</servlet-name>
+<servlet-class>controller.supplier.EditSupplierServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>EditSupplier</servlet-name>
+<url-pattern>/EditSupplierServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>DeleteSupplier</servlet-name>
+<servlet-class>controller.supplier.DeleteSupplierServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>DeleteSupplier</servlet-name>
+<url-pattern>/DeleteSupplierServlet</url-pattern>
+
+<servlet>
+    <servlet-name>AddFeedbackServlet</servlet-name>
+    <servlet-class>servlet.AddFeedbackServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddFeedbackServlet</servlet-name>
+    <url-pattern>/addFeedback</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>EditFeedbackServlet</servlet-name>
+    <servlet-class>servlet.EditFeedbackServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>EditFeedbackServlet</servlet-name>
+    <url-pattern>/editFeedback</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>DeleteFeedbackServlet</servlet-name>
+    <servlet-class>servlet.DeleteFeedbackServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DeleteFeedbackServlet</servlet-name>
+    <url-pattern>/deleteFeedback</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ListFeedbackServlet</servlet-name>
+    <servlet-class>servlet.ListFeedbackServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ListFeedbackServlet</servlet-name>
+    <url-pattern>/listFeedback</url-pattern>
+</servlet-mapping>
+
+</servlet-mapping>

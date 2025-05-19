@@ -1,0 +1,144 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #333;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+/* Heading */
+h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Add Supplier Button */
+a.add-supplier {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+a.add-supplier:hover {
+    background-color: #357ab7;
+    transform: scale(1.05);
+}
+
+/* Modern Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    overflow: hidden;
+
+}
+
+/* Table Header */
+table th {
+    background-color: #3498db; /* A modern, vibrant blue */
+    color: #fff;
+    padding: 16px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Table Cells */
+table td {
+    padding: 16px;
+    color: #333;
+    font-size: 1rem;
+    background-color: #f9fbfd;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Row Hover Effect */
+table tr:hover td {
+    background-color: #f1f5f9;
+    transition: background-color 0.3s ease;
+}
+
+/* Action Buttons */
+.action-buttons a {
+    padding: 8px 16px;
+    margin-right: 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Edit Button */
+.action-buttons a.edit {
+    background-color: #00b894;
+    color: #fff;
+}
+
+.action-buttons a.edit:hover {
+    background-color: #00a279;
+}
+
+/* Delete Button */
+.action-buttons a.delete {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.action-buttons a.delete:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background: #fff;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    td {
+        padding: 12px;
+        text-align: right;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #555;
+    }
+}
