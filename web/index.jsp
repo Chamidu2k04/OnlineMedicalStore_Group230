@@ -184,7 +184,7 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="supplier/list.jsp">Suppliers</a></li>
-            <li><a href="#">Medicines</a></li>
+            <li><a href="medicine/listMedicine.jsp">Medicines</a></li>
             <li><a href="#">Orders</a></li>
             <li><a href="feedback/list.jsp">Feedbacks</a></li>
         </ul>
