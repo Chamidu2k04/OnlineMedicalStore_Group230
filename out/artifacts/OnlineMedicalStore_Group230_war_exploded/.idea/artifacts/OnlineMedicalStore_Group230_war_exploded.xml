@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="OnlineMedicalStore_Group230:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/OnlineMedicalStore_Group230_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="OnlineMedicalStore_Group230" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="OnlineMedicalStore_Group230/web/Web" />
+      <element id="module-source" name="OnlineMedicalStore_Group230" />
+      <element id="dir-copy" path="$PROJECT_DIR$" />
+    </root>
+  </artifact>
+</component>

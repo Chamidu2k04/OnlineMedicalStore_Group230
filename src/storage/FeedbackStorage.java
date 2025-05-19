@@ -1,48 +1,51 @@
 package storage;
 
 import model.Feedback;
-
-import javax.servlet.ServletContext;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class FeedbackStorage {
-//    private static final String FILE_PATH = "C:/Users/94718/Documents/GitHub/OnlineMedicalStore_Group230/data/feedback.dat";
-    private static final String FILE_PATH = "data/feedback.dat";
+    private static final String FILE_PATH = "D:/medical_store/feedbacks.dat";
 
-
-    public void addFeedback(Feedback feedback) throws IOException, ClassNotFoundException {
+    public static void addFeedback(Feedback f) throws IOException, ClassNotFoundException {
         List<Feedback> list = getAllFeedbacks();
-        list.add(feedback);
+        list.add(f);
         saveAll(list);
     }
 
-    public List<Feedback> getAllFeedbacks() throws IOException, ClassNotFoundException {
-        File file = new File(FILE_PATH);
-        if (!file.exists() || file.length() == 0) {
-            return new ArrayList<>();
+    public static void updateFeedback(Feedback updated) throws IOException, ClassNotFoundException {
+        List<Feedback> list = getAllFeedbacks();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId().equals(updated.getId())) {
+                list.set(i, updated);
+                break;
+            }
         }
+        saveAll(list);
+    }
+
+    public static void deleteFeedback(String id) throws IOException, ClassNotFoundException {
+        List<Feedback> list = getAllFeedbacks();
+        list.removeIf(f -> f.getId().equals(id));
+        saveAll(list);
+    }
+
+    public static List<Feedback> getAllFeedbacks() throws IOException, ClassNotFoundException {
+        File file = new File(FILE_PATH);
+        if (!file.exists()) return new ArrayList<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
             return (List<Feedback>) ois.readObject();
         }
     }
 
-    public void deleteFeedback(String userName, String medicineName) throws IOException, ClassNotFoundException {
-        List<Feedback> list = getAllFeedbacks();
-        list.removeIf(feedback -> feedback.getUserName().equals(userName) &&
-                feedback.getMedicineName().equals(medicineName));
-        saveAll(list);
+    public static Feedback getFeedbackById(String id) throws IOException, ClassNotFoundException {
+        for (Feedback f : getAllFeedbacks()) {
+            if (f.getId().equals(id)) return f;
+        }
+        return null;
     }
 
-    private void saveAll(List<Feedback> list) throws IOException {
-        // Create directory if it doesn't exist
-        File file = new File(FILE_PATH);
-        File directory = file.getParentFile();
-        if (!directory.exists()) {
-            directory.mkdirs();
-        }
-
+    private static void saveAll(List<Feedback> list) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
             oos.writeObject(list);
         }
